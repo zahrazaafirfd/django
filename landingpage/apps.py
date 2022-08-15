@@ -1,6 +1,7 @@
-from django.apps import AppConfig
+from django.contrib import admin
+from django.urls import path, include
 
-
-class LandingpageConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'landingpage'
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('landingpage/', include('landingpage.urls')),
+]
