@@ -3,7 +3,5 @@ from django.urls import path, include
 
 
 class LandingpageConfig(AppConfig):
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('landingpage/', include('landingpage.urls')),
-]
+    DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+    name = 'landingpage'
